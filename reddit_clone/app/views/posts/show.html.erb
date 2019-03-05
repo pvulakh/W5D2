@@ -1,0 +1,13 @@
+<h1>Show Post</h1>
+
+<%= @post.title %>
+
+<%= @post.url %>
+
+<%= @post.content %>
+
+<form action="<%= post_url %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Destroy">
+</form>
